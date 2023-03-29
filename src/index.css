@@ -1,13 +1,30 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+@import url("https://fonts.googleapis.com/css2?family=Mynerve&family=Open+Sans:wght@300&family=Tilt+Warp&display=swap");
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+/* GLOBAL STYLE */
+#root {
+  --bg-color: #191a19;
+  --bg-todo: #fff38c;
+  --bg-button: #d9cb50;
+  --bg-button-hover: #c0b236;
+  --bg-todos-hover: #ded058;
+  --bg-input: #d8e9a8;
+  --bg-todo-completed: #c0b238;
+  --i-done: #1da01d;
+  --i-edit: #2b69e4;
+  --i-delete: #ff002d;
+  --h1-color: #d8e9a8;
+  --p-color: #717663;
+  --p-color-completed: #e1edbe;
+  --ff-completed: "Mynerve", cursive;
+  --ff-heading: "Tilt Warp", cursive;
+  --ff-txt: "Open Sans", sans-serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: #191a19;
 }

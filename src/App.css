@@ -1,38 +1,159 @@
-.App {
-  text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+/* /////////////////INPUT SECTION STYLE//////////////////// */
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+.sectiom {
+  min-width: 100%;
+}
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+.input-container {
+  display: flex;
+  place-content: center;
+  padding-bottom: 3em;
+}
+.input-area {
   display: flex;
   flex-direction: column;
   align-items: center;
+  row-gap: 1em;
+  margin: 3em 0;
+  padding: 3em;
+  border: 3px solid var(--h1-color);
+  border-radius: 8px;
+}
+.heading {
+  font-family: var(--ff-heading);
+  color: var(--h1-color);
+  font-size: 4rem;
+  margin-bottom: 0.2em;
+}
+
+input {
+  width: 300px;
+  height: 2em;
+  border: 0;
+  outline: 0;
+  font-size: 18px;
+  background: var(--bg-input);
+  border-radius: 2px;
+}
+button {
+  margin-top: 0.3em;
+  padding: 0.8em 4em;
+  font-weight: 300;
+  font-size: 0.8rem;
+  font-family: var(--ff-heading);
+  border-radius: 3px;
+  outline: 0;
+  border: 0;
+  background-color: var(--bg-button);
+  transition: .2s ease-in-out;
+}
+button:hover{
+  background: var(--bg-button-hover);
+}
+
+/* /////////////////TODOS SHOW SECTION STYLE//////////////////// */
+
+
+.todo-area {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding-bottom: 4em;
+}
+.todos {
+  min-width: 250px;
+  max-width: calc(40% - 3em);
+  word-wrap: break-word;
+  min-height: 5em;
+  padding: 0.8em;
+  background: var(--bg-todo);
+  font-family: var(--ff-txt);
+  border-radius: 4px;
+  text-transform: capitalize;
+  transition: .2s ease-in;
+}
+.todos:hover {
+  background: var(--bg-todos-hover);
 }
 
-.App-link {
-  color: #61dafb;
+span {
+  display: flex;
+  gap: 0.4em;
+  justify-content: flex-end;
+  margin-bottom: 1em;
+  font-size: 16px;
+}
+.todo-done:hover,
+.todo-edit:hover,
+.todo-delete:hover {
+  cursor: pointer;
+  scale: 1.2;
+}
+.todo-done:hover{
+  color: var(--i-done);
+  
+
+}
+.todo-edit:hover{
+  color: var(--i-edit);
+  
+}
+.todo-delete:hover{
+  color: var(--i-delete);
+}
+.complete,.complete:hover{
+  background: var(--bg-todo-completed);
+  font-family: var(--ff-completed);
+  text-decoration: line-through;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.visible{
+  visibility: hidden;
+}
+
+/* ///////////////// MEDIA QUERY STYLES //////////////////// */
+
+
+@media screen and (max-width:650px) {
+  .container {
+    width: 100%;
   }
-  to {
-    transform: rotate(360deg);
+  .input-container{
+    padding-bottom: 1em;
+  }
+
+  .heading{
+    font-size: 3rem;
+  margin-bottom: 0.2em;
+  }
+  input {
+    width: 280px;
+    height: 2em;
+  }
+  .todo-area {
+    width:90%;
+    padding-bottom: 2em;
+    
+  }
+  .todos{
+    min-width: 65%;
+  }
+}
+@media screen and (max-width:390px) {
+
+  .heading{
+    font-size: 1.5rem;
+  
+  }
+  input {
+    width: 240px;
+    
   }
 }
